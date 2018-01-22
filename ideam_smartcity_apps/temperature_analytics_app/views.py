@@ -31,6 +31,12 @@ def get_temperature_data(request):
 
 	historical_data=json.loads(json.loads(historical_data)["hits"]["hits"][0]["_source"]["data"])
 
+	historical_data["epoch"]=str(int(historical_data["epoch"]) + 19800)
+
+	historical_data["temperature"]=str(round(float(historical_data["temperature"]),1))
+
+	historical_data["humidity"]=str(round(float(historical_data["humidity"]),1))
+
 	historical_data["epoch"]=time.strftime('%H:%M:%S %d-%m-%Y', time.localtime(int(historical_data["epoch"])))
 
 	return render(request, 'temperature_analytics_app/index.html', {

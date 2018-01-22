@@ -6,8 +6,9 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),    
     url(r'^$', views.get_temperature_data),
+
 ]
 
 if settings.DEBUG:
