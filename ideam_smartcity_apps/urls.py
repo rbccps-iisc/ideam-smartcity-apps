@@ -19,5 +19,5 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^temperature-analytics-app/', include('temperature_analytics_app.urls')),    
+    url(r'^sensor-stats-app/', include('temperature_analytics_app.urls')),    
 ]

@@ -25,7 +25,7 @@ SECRET_KEY = 'p@#zkp+e!j55%4qwrnkm9o2#f-$-_u#fxclv*=&3km0y+_2sdp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['ideam-smartcity-apps.herokuapp.com','localhost']
 
 
 # Application definition

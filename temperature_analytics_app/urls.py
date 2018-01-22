@@ -8,7 +8,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),    
     url(r'^$', views.get_temperature_data),
-	url(r'^/css/main$', views.get_temperature_data),
 
 ]
 
