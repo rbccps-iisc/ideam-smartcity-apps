@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style id="stndz-style"></style>
+
+<title>Indoor Temperature, Humidity and Light Sensor Stats App | RBCCPS-IDEAM-APP</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+<meta name="description" content="Just an IDEAM stats app.">
+
+<meta name="author" content="Jishnu Jaykumar P, http://jishnup.me">
+
+<meta property="og:site_name" content="Temperature, Humidity, Light State, Stats App">
+
+<meta property="og:title" content="IDEAM APP">
+
+<meta property="og:image" content="https://i0.wp.com/www.rbccps.org/wp-content/uploads/2016/11/RBCCPS_Banner-e1480481266426.png?fit=660%2C91">
+
+<meta property="og:url" content="https://smartcity.rbccps.org/">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic" rel="stylesheet" type="text/css" />
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+" rel="stylesheet" type="text/css" />
+
+<link href="{% static "temperature_analytics_app/css/main.css" %}" rel="stylesheet" type="text/css">
+
+<link href="{% static "temperature_analytics_app/css/second.css" %}" rel="stylesheet" type="text/css">
+	
+	<noscript>
+	&lt;style&gt;body {overflow: auto !important;}body:after {display: none !important;}#main &gt; .inner {opacity: 1.0 !important;}#main {opacity: 1.0 !important;-moz-transform: none !important;-webkit-transform: none !important;-ms-transform: none !important;transform: none !important;-moz-transition: none !important;-webkit-transition: none !important;-ms-transition: none !important;transition: none !important;-moz-filter: none !important;-webkit-filter: none !important;-ms-filter: none !important;filter: none !important;}&lt;/style&gt;
+	</noscript>
+</head>
+
+	<body class="is-ready" data-gr-c-s-loaded="true">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<h1 id="text02" style="font-size: 35px"><b>Indoor Temperature Humidity and Light Sensor Stats App</b></h1>
+
+					<hr id="divider01">					
+
+					<p style="font-size: 32px">
+					<i class="fa fa-podcast" aria-hidden="true"></i> : {{device_id}}</p>
+					{{historical_data}}
+					<p style="font-size: 32px"><i class="fa fa-clock-o" aria-hidden="true"></i>
+ : {{time}}</p>
+					<p style="font-size: 32px">
+					<i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> : {{temperature}}°C</p>
+					<p style="font-size: 32px"><i class="fa fa-tint" aria-hidden="true"></i>
+ : {{humidity}}%</p>
+					<p style="font-size: 32px"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+ : {{light_state}}</p>
+
+					<hr id="divider01">
+
+					<p id="text01">Made with ♥ using the  <a href="https://github.com/rbccps-iisc/ideam-python-sdk" target="_blank">IDEAM SDK</a>
+
+					<br>
+
+					&copy; 2018 | <a href="http://www.rbccps.org/" target="_blank">RBCCPS, Indian Institute of Science Bangalore</a>
+					</p>
+
+						
+				</div>
+			</div>
+		</div>
+
+		<script src="{% static "temperature_analytics_app/js/first.js" %}" type="text/javascript">
+
+		<div id="ritekit-alerts" style="opacity: 0;"></div>
+		<div id="ritekit-alerts" style="opacity: 0;"></div>
+		<script type="text/javascript">(() => {
+            let editors = [];
+            setInterval(() => {
+                if(typeof tinymce !== 'undefined' && tinymce.activeEditor && editors.indexOf(tinymce.activeEditor) === -1){
+                    editors.push(tinymce.activeEditor);
+                    tinymce.activeEditor.on('keyup', function(e) {
+                        const detail = {
+                            keyCode: e.keyCode || e.which,
+                            text: tinymce.activeEditor.getBody().textContent
+                        }
+                        const event = new CustomEvent('tinymcekeypress', {detail: detail});
+                        document.body.dispatchEvent(event);
+                    });
+                }
+            })
+        	})("");
+        </script>
+        
+        <!-- Made using https://carrd.co template-37-->
+
+        </body>
+        
+</html>
