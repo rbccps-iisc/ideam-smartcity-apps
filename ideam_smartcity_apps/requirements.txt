@@ -4,7 +4,7 @@ chardet==3.0.4
 foreman==0.9.7
 futures==3.0.3
 idna==2.6
-requests==2.18.4
+requests==2.20.0
 requests-futures==0.9.5
 urllib3==1.22
 gunicorn==19.7.1
