@@ -1,5 +1,5 @@
 setuptools
-certifi==2017.11.5
+certifi==2022.12.7
 chardet==3.0.4
 foreman==0.9.7
 futures==3.0.3
